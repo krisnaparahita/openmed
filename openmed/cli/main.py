@@ -89,6 +89,7 @@ from .scaffold import (
     ScaffoldError,
     scaffold_project,
 )
+from .multimodal_preflight import add_multimodal_command
 from .slm_verify import add_slm_verify_command
 from .verify_pdf import add_verify_pdf_command
 
@@ -630,6 +631,7 @@ def build_parser() -> argparse.ArgumentParser:
     add_gates_command(subparsers)
     add_repro_command(subparsers)
     add_verify_pdf_command(subparsers)
+    add_multimodal_command(subparsers)
     _finalize_parser(parser)
     return parser
 
